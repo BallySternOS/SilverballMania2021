@@ -88,64 +88,79 @@ boolean MachineStateChanged = true;
 #define EEPROM_SPECIAL_SCORE_BYTE       144
 
 
-#define SOUND_EFFECT_NONE               0
-#define SOUND_EFFECT_INLANE_UNLIT       3
-#define SOUND_EFFECT_OUTLANE_UNLIT      4
-#define SOUND_EFFECT_INLANE_LIT         5
-#define SOUND_EFFECT_OUTLANE_LIT        6
-#define SOUND_EFFECT_BUMPER_HIT         7
-#define SOUND_EFFECT_ADD_CREDIT         10
-#define SOUND_EFFECT_LIGHT_LETTER       11
-#define SOUND_EFFECT_KICKER_WATCH       12
-#define SOUND_EFFECT_KICKER_LAUNCH      13
-#define SOUND_EFFECT_BALL_OVER          19
-#define SOUND_EFFECT_GAME_OVER          20
-#define SOUND_EFFECT_EXTRA_BALL         23
-#define SOUND_EFFECT_MACHINE_START      24
-#define SOUND_EFFECT_SKILL_SHOT         25
-#define SOUND_EFFECT_TILT_WARNING       28
-#define SOUND_EFFECT_MATCH_SPIN         30
-#define SOUND_EFFECT_SPINNER_HIGH       32
-#define SOUND_EFFECT_SPINNER_LOW        33
-#define SOUND_EFFECT_SLING_SHOT         34
-#define SOUND_EFFECT_ROLLOVER           35
-#define SOUND_EFFECT_50PT_SWITCH        36
-#define SOUND_EFFECT_HORSESHOE          37
-#define SOUND_EFFECT_SILVERBALL_COMPLETION  38
-#define SOUND_EFFECT_BONUS_X_INCREASED  39
-#define SOUND_EFFECT_ANIMATION_TICK     40
-#define SOUND_EFFECT_ADDED_BONUS_QUALIFIED  41
-#define SOUND_EFFECT_ADDED_BONUS_COLLECT  42
-#define SOUND_EFFECT_PLACEHOLDER_LETTER 43
-#define SOUND_EFFECT_UNLIT_LAMP_1       44
-#define SOUND_EFFECT_UNLIT_LAMP_2       45
-#define SOUND_EFFECT_ADD_PLAYER_1       50
-#define SOUND_EFFECT_ADD_PLAYER_2       (SOUND_EFFECT_ADD_PLAYER_1+1)
-#define SOUND_EFFECT_ADD_PLAYER_3       (SOUND_EFFECT_ADD_PLAYER_1+2)
-#define SOUND_EFFECT_ADD_PLAYER_4       (SOUND_EFFECT_ADD_PLAYER_1+3)
-#define SOUND_EFFECT_PLAYER_1_UP        54
-#define SOUND_EFFECT_PLAYER_2_UP        (SOUND_EFFECT_PLAYER_1_UP+1)
-#define SOUND_EFFECT_PLAYER_3_UP        (SOUND_EFFECT_PLAYER_1_UP+2)
-#define SOUND_EFFECT_PLAYER_4_UP        (SOUND_EFFECT_PLAYER_1_UP+3)
-#define SOUND_EFFECT_SHOOT_AGAIN        60
-#define SOUND_EFFECT_TILT               61
-#define SOUND_EFFECT_BONUS_START        65
-#define SOUND_EFFECT_BONUS_1K           66
-#define SOUND_EFFECT_BONUS_15K          67
-#define SOUND_EFFECT_BONUS_30K          68
-#define SOUND_EFFECT_BONUS_KS           69
-#define SOUND_EFFECT_BONUS_OVER         70
-#define SOUND_EFFECT_STOP_SOUNDS        71
-#define SOUND_EFFECT_VOICE_EXTRA_BALL             81
-#define SOUND_EFFECT_BACKGROUND_DRONE   89
-#define SOUND_EFFECT_BACKGROUND_1       90
-#define SOUND_EFFECT_BACKGROUND_2       91
-#define SOUND_EFFECT_BACKGROUND_3       92
-#define SOUND_EFFECT_BACKGROUND_WIZ     93
+#define SOUND_EFFECT_NONE                 0
+#define SOUND_EFFECT_SPINNER_LOW          1
+#define SOUND_EFFECT_TOPLANE_UNLIT        2
+#define SOUND_EFFECT_50PT_SWITCH          3
+#define SOUND_EFFECT_TOPLANE_LIT          4
+#define SOUND_EFFECT_HORSESHOE            5
+#define SOUND_EFFECT_SPINNER_HIGH         6
+#define SOUND_EFFECT_LIGHT_LETTER         7
+#define SOUND_EFFECT_UNLIT_LAMP_1         8
+#define SOUND_EFFECT_UNLIT_LAMP_2         9
+#define SOUND_EFFECT_SLING_SHOT           10
+#define SOUND_EFFECT_BUMPER_HIT_1         11
+#define SOUND_EFFECT_BUMPER_HIT_2         12
+#define SOUND_EFFECT_BUMPER_HIT_3         13
+#define SOUND_EFFECT_OUTLANE_UNLIT        14
+#define SOUND_EFFECT_SHOOT_AGAIN          15
+#define SOUND_EFFECT_KICKER_LAUNCH        16
+#define SOUND_EFFECT_ADDED_BONUS_COLLECT  17
+#define SOUND_EFFECT_SILVERBALL_COMPLETION  18
+#define SOUND_EFFECT_BONUS_X_INCREASED    19
+#define SOUND_EFFECT_ADD_CREDIT_1         28
+#define SOUND_EFFECT_ADD_CREDIT_2         29
+#define SOUND_EFFECT_ADD_CREDIT_3         30
+#define SOUND_EFFECT_ANIMATION_TICK       33
+#define SOUND_EFFECT_ADDED_BONUS_QUALIFIED  34
+#define SOUND_EFFECT_TILT_WARNING         35
+#define SOUND_EFFECT_TILT                 36
+#define SOUND_EFFECT_BONUS_START          37
+#define SOUND_EFFECT_BONUS_1K             38
+#define SOUND_EFFECT_BONUS_15K            39
+#define SOUND_EFFECT_BONUS_30K            40
+#define SOUND_EFFECT_BONUS_KS             41
+#define SOUND_EFFECT_BONUS_OVER           42
+#define SOUND_EFFECT_EXTRA_BALL           43
+#define SOUND_EFFECT_KICKER_WATCH         44
+#define SOUND_EFFECT_BALL_OVER            45
+#define SOUND_EFFECT_GAME_OVER            46
+#define SOUND_EFFECT_MACHINE_START        47
+#define SOUND_EFFECT_SKILL_SHOT           48
+#define SOUND_EFFECT_MATCH_SPIN           49
+#define SOUND_EFFECT_ROLLOVER             50
+#define SOUND_EFFECT_PLACEHOLDER_LETTER   51
+#define SOUND_EFFECT_STOP_SOUNDS          71
+#define SOUND_EFFECT_BACKGROUND_DRONE     89
 
-#define MAX_DISPLAY_BONUS     55
+#define SOUND_EFFECT_VP_VOICE_NOTIFICATIONS_START   100
+#define SOUND_EFFECT_ADD_PLAYER_1         100
+#define SOUND_EFFECT_ADD_PLAYER_2         (SOUND_EFFECT_ADD_PLAYER_1+1)
+#define SOUND_EFFECT_ADD_PLAYER_3         (SOUND_EFFECT_ADD_PLAYER_1+2)
+#define SOUND_EFFECT_ADD_PLAYER_4         (SOUND_EFFECT_ADD_PLAYER_1+3)
+#define SOUND_EFFECT_PLAYER_1_UP          104
+#define SOUND_EFFECT_PLAYER_2_UP          (SOUND_EFFECT_PLAYER_1_UP+1)
+#define SOUND_EFFECT_PLAYER_3_UP          (SOUND_EFFECT_PLAYER_1_UP+2)
+#define SOUND_EFFECT_PLAYER_4_UP          (SOUND_EFFECT_PLAYER_1_UP+3)
+#define NUM_VOICE_NOTIFICATIONS           8
+
+#define SOUND_EFFECT_BACKGROUND_1         201
+#define SOUND_EFFECT_BACKGROUND_2         202
+#define SOUND_EFFECT_BACKGROUND_3         203
+#define SOUND_EFFECT_BACKGROUND_4         204
+#define SOUND_EFFECT_BACKGROUND_5         205
+#define SOUND_EFFECT_BACKGROUND_6         206
+
+#define MAX_DISPLAY_BONUS               55
 #define TILT_WARNING_DEBOUNCE_TIME      1000
 
+#if defined(USE_WAV_TRIGGER) || defined(USE_WAV_TRIGGER_1p3)
+int SongNormalVolume = -4;
+int SoundEffectsNormalVolume = -4;
+int SongDuckedVolume = -20;
+
+void PlaySoundEffect(byte soundEffectNum, int gain = 100);
+#endif
 
 /*********************************************************************
 
@@ -957,7 +972,7 @@ void AddCredit(boolean playSound = false, byte numToAdd = 1) {
     Credits += numToAdd;
     if (Credits > MaximumCredits) Credits = MaximumCredits;
     BSOS_WriteByteToEEProm(BSOS_CREDITS_EEPROM_BYTE, Credits);
-    if (playSound) PlaySoundEffect(SOUND_EFFECT_ADD_CREDIT);
+    if (playSound) PlaySoundEffect(SOUND_EFFECT_ADD_CREDIT_1 + CurrentTime%3);
     BSOS_SetDisplayCredits(Credits, !FreePlayMode);
     BSOS_SetCoinLockout(false);
   } else {
@@ -1250,6 +1265,7 @@ void PlayBackgroundSong(byte songNum) {
 }
 
 
+
 #ifdef BALLY_STERN_OS_USE_DASH51
 
 
@@ -1366,21 +1382,22 @@ void UpdateSoundQueue() {
 
 unsigned long NextSoundEffectTime = 0;
 
-void PlaySoundEffect(byte soundEffectNum) {
+#if defined(USE_WAV_TRIGGER) || defined(USE_WAV_TRIGGER_1p3)
+
+void PlaySoundEffect(byte soundEffectNum, int gain) {
 
   if (MusicLevel == 0) return;
-
-#if defined(USE_WAV_TRIGGER) || defined(USE_WAV_TRIGGER_1p3)
 
 #ifndef USE_WAV_TRIGGER_1p3
   if (  soundEffectNum == SOUND_EFFECT_THUMPER_BUMPER_HIT ||
         SOUND_EFFECT_SPINNER ) wTrig.trackStop(soundEffectNum);
 #endif
+  if (gain==100) gain = SoundEffectsNormalVolume;
   wTrig.trackPlayPoly(soundEffectNum);
-  //  char buf[128];
-  //  sprintf(buf, "s=%d\n", soundEffectNum);
-  //  Serial.write(buf);
+  wTrig.trackGain(soundEffectNum, gain);
+}
 #endif
+
 
 /*
  * Start game = 0x08 (delay 180) 0x1F
@@ -1403,6 +1420,9 @@ void PlaySoundEffect(byte soundEffectNum) {
  */
 
 #ifdef BALLY_STERN_OS_USE_DASH51
+void PlaySoundEffect(byte soundEffectNum) {
+  if (MusicLevel == 0) return;
+
   switch(soundEffectNum) {
     case SOUND_EFFECT_BACKGROUND_DRONE:
       PlaySoundEffectWhenPossible(0x11, 500, 1000, 100);
@@ -1425,7 +1445,9 @@ void PlaySoundEffect(byte soundEffectNum) {
     case SOUND_EFFECT_BONUS_OVER:
       PlaySoundEffectWhenPossible(0x1F, 0, 40, 90);
       break;
-    case SOUND_EFFECT_BUMPER_HIT:
+    case SOUND_EFFECT_BUMPER_HIT_1:
+    case SOUND_EFFECT_BUMPER_HIT_2:
+    case SOUND_EFFECT_BUMPER_HIT_3:
       PlaySoundEffectWhenPossible(0x0D, 0, 50, 10); 
       break;
     case SOUND_EFFECT_SLING_SHOT:
@@ -1474,7 +1496,9 @@ void PlaySoundEffect(byte soundEffectNum) {
       PlaySoundEffectWhenPossible(0x05, 3500, 250, 100);
       PlaySoundEffectWhenPossible(0x06, 4000, 250, 100);
       break;
-    case SOUND_EFFECT_ADD_CREDIT:
+    case SOUND_EFFECT_ADD_CREDIT_1:
+    case SOUND_EFFECT_ADD_CREDIT_2:
+    case SOUND_EFFECT_ADD_CREDIT_3:
       PlaySoundEffectWhenPossible(0x07, 0, 500, 100); // siren
       break;
     case SOUND_EFFECT_ADD_PLAYER_1:
@@ -1541,7 +1565,6 @@ void PlaySoundEffect(byte soundEffectNum) {
       PlaySoundEffectWhenPossible(0x13, 0, 20, 50); 
       break;
   }
-#endif  
 
   if (DEBUG_MESSAGES) {
     char buf[129];
@@ -1550,6 +1573,7 @@ void PlaySoundEffect(byte soundEffectNum) {
   }
 
 }
+#endif  
 
 inline void StopSoundEffect(byte soundEffectNum) {
 #if defined(USE_WAV_TRIGGER) || defined(USE_WAV_TRIGGER_1p3)
@@ -1562,6 +1586,102 @@ inline void StopSoundEffect(byte soundEffectNum) {
   }
 #endif
 }
+
+
+
+#if defined(USE_WAV_TRIGGER) || defined(USE_WAV_TRIGGER_1p3)
+
+#define VOICE_NOTIFICATION_STACK_SIZE   10
+#define VOICE_NOTIFICATION_STACK_EMPTY  0xFFFF
+byte VoiceNotificationStackFirst;
+byte VoiceNotificationStackLast;
+unsigned int VoiceNotificationNumStack[VOICE_NOTIFICATION_STACK_SIZE];
+unsigned long NextVoiceNotificationPlayTime;
+
+byte VoiceNotificationDurations[NUM_VOICE_NOTIFICATIONS] = {
+  3, 3, 3, 3, 4, 4, 4, 4
+};
+
+
+int SpaceLeftOnNotificationStack() {
+  if (VoiceNotificationStackFirst>=VOICE_NOTIFICATION_STACK_SIZE || VoiceNotificationStackLast>=VOICE_NOTIFICATION_STACK_SIZE) return 0;
+  if (VoiceNotificationStackLast>=VoiceNotificationStackFirst) return ((VOICE_NOTIFICATION_STACK_SIZE-1) - (VoiceNotificationStackLast-VoiceNotificationStackFirst));
+  return (VoiceNotificationStackFirst - VoiceNotificationStackLast) - 1;
+}
+
+
+void PushToNotificationStack(unsigned int notification) {
+  // If the switch stack last index is out of range, then it's an error - return
+  if (SpaceLeftOnNotificationStack()==0) return;
+
+  VoiceNotificationNumStack[VoiceNotificationStackLast] = notification;
+  
+  VoiceNotificationStackLast += 1;
+  if (VoiceNotificationStackLast==VOICE_NOTIFICATION_STACK_SIZE) {
+    // If the end index is off the end, then wrap
+    VoiceNotificationStackLast = 0;
+  }
+}
+
+
+unsigned int PullFirstFromVoiceNotificationStack() {
+  // If first and last are equal, there's nothing on the stack
+  if (VoiceNotificationStackFirst==VoiceNotificationStackLast) return VOICE_NOTIFICATION_STACK_EMPTY;
+
+  unsigned int retVal = VoiceNotificationNumStack[VoiceNotificationStackFirst];
+
+  VoiceNotificationStackFirst += 1;
+  if (VoiceNotificationStackFirst>=VOICE_NOTIFICATION_STACK_SIZE) VoiceNotificationStackFirst = 0;
+
+  return retVal;
+}
+
+
+
+void QueueNotification(unsigned int soundEffectNum, byte priority) {
+
+  if (soundEffectNum<SOUND_EFFECT_VP_VOICE_NOTIFICATIONS_START || soundEffectNum>=(SOUND_EFFECT_VP_VOICE_NOTIFICATIONS_START+NUM_VOICE_NOTIFICATIONS)) return;
+
+  // If there's nothing playing, we can play it now
+  if (NextVoiceNotificationPlayTime==0) {
+    if (CurrentBackgroundSong!=SOUND_EFFECT_NONE) {
+      wTrig.trackFade(CurrentBackgroundSong, SongDuckedVolume, 500, 0);
+    }
+    NextVoiceNotificationPlayTime = CurrentTime + (unsigned long)(VoiceNotificationDurations[soundEffectNum-SOUND_EFFECT_VP_VOICE_NOTIFICATIONS_START])*1000;
+    PlaySoundEffect(soundEffectNum, 2);  
+  } else {
+    if (priority==0) {
+      PushToNotificationStack(soundEffectNum);
+    }
+  }
+}
+
+unsigned long SongVolumeRampDone = 0;
+int LastVolumeRamp;
+
+void ServiceNotificationQueue() {
+  if (NextVoiceNotificationPlayTime!=0 && CurrentTime>NextVoiceNotificationPlayTime) {
+    // Current notification done, see if there's another
+    unsigned int nextNotification = PullFirstFromVoiceNotificationStack();
+    if (nextNotification!=VOICE_NOTIFICATION_STACK_EMPTY) {
+      if (CurrentBackgroundSong!=SOUND_EFFECT_NONE) {
+        wTrig.trackFade(CurrentBackgroundSong, SongDuckedVolume, 500, 0);
+      }
+      NextVoiceNotificationPlayTime = CurrentTime + (unsigned long)(VoiceNotificationDurations[nextNotification-SOUND_EFFECT_VP_VOICE_NOTIFICATIONS_START])*1000;
+      PlaySoundEffect(nextNotification, 2);  
+    } else {
+      // No more notifications -- set the volume back up and clear the variable
+      if (CurrentBackgroundSong!=SOUND_EFFECT_NONE) {
+          wTrig.trackFade(CurrentBackgroundSong, SongNormalVolume, 1500, 0);
+      }
+      NextVoiceNotificationPlayTime = 0;
+    }    
+  }
+  
+}
+
+#endif
+
 
 ////////////////////////////////////////////////////////////////////////////
 //
@@ -2129,6 +2249,8 @@ int InitNewBall(bool curStateChanged, byte playerNum, int ballNum) {
     KickerStatus = 0;
     ExtraBallHurryUp = 0;
     AwardLightAnimationEnd = 0;
+    AddedBonusQualified[CurrentPlayer] = 0;
+    
     if (MusicLevel==2) PlaySoundEffect(SOUND_EFFECT_BACKGROUND_DRONE);
   }
 
@@ -2777,7 +2899,7 @@ int RunGamePlayMode(int curState, boolean curStateChanged) {
         case SW_RIGHT_BUMPER:
         case SW_CENTER_BUMPER:
           CurrentScores[CurrentPlayer] += 100 * ScoreMultiplier;
-          PlaySoundEffect(SOUND_EFFECT_BUMPER_HIT);
+          PlaySoundEffect(SOUND_EFFECT_BUMPER_HIT_1 + CurrentTime%3);
           if (BallFirstSwitchHitTime == 0) BallFirstSwitchHitTime = CurrentTime;
           break;
         case SW_RIGHT_A_TARGET:

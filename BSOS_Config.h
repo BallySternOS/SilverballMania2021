@@ -31,7 +31,7 @@
 #define BALLY_STERN_OS_HARDWARE_REV   1
 
 
-#define BALLY_STERN_OS_USE_DIP_SWITCHES 
+//#define BALLY_STERN_OS_USE_DIP_SWITCHES 
 //#define BALLY_STERN_OS_USE_SQUAWK_AND_TALK
 #define BALLY_STERN_OS_USE_DASH51
 //#define BALLY_STERN_OS_USE_SB100
@@ -95,27 +95,11 @@
 #define CONTSOL_DISABLE_FLIPPERS      0x40
 #define CONTSOL_DISABLE_COIN_LOCKOUT  0x20
 
-
-
-// If this define (BSOS_UPDATED_TIMING) is in here
-// then the interrupt timing will be independent of the 
+// The interrupt timing in now independent of the 
 // MPU clock, so the BSOS_NUM_SWITCH_LOOPS and BSOS_NUM_LAMP_LOOPS
 // won't be used
-#define BSOS_UPDATED_TIMING   1
-
-#ifndef BSOS_UPDATED_TIMING
-// This define needs to be set for the number of loops 
-// needed to get a delay of 80 us
-// So, set it to (0.000080) / (1/Clock Frequency)
-// Assuming Frequency = 500kHz,  40 = (0.000080) / (1/500000)
-#define BSOS_NUM_SWITCH_LOOPS 70
-// 60 us
-// So, set this to (0.000060) / (1/Clock Frequency)
-#define BSOS_NUM_LAMP_LOOPS   30
-#else
 #define BSOS_SWITCH_DELAY_IN_MICROSECONDS 200
 #define BSOS_TIMING_LOOP_PADDING_IN_MICROSECONDS  70
-#endif 
 
 // Fast boards might need a slower lamp strobe
 #define BSOS_SLOW_DOWN_LAMP_STROBE  0
